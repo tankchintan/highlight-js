@@ -15,20 +15,10 @@ Johann Burkard
 */
 !function($) {
 	$.fn.highlight = function(pat) {
-		//Based on Underscore's implementation for isArray method.
-		var _isArrayInner = Array.isArray ||
-		function(obj) {
-			return toString.call(obj) == '[object Array]';
-		};
-
-		function isArray(obj) {
-			return _isArrayInner(obj);
-		};
-
 		function innerHighlight(node, pat) {
 			var skip = 0;
 			if (node.nodeType == 3) {
-				var isPatternArray = isArray(pat);
+				var isPatternArray = $.isArray(pat);
 				if (!isPatternArray) {
 					pat = [pat];
 				}
