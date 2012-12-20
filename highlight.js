@@ -53,7 +53,7 @@ jQuery.fn.highlight = function(pat) {
         }
         return skip;
     }
-    return this.each(function() {
+    return this.length && pat && pat.length ? this.each(function() {
         innerHighlight(this, pat);
     });
 };
