@@ -55,7 +55,7 @@ jQuery.fn.highlight = function(pat) {
     }
     return this.length && pat && pat.length ? this.each(function() {
         innerHighlight(this, pat);
-    });
+    }) : this;
 };
 
 jQuery.fn.removeHighlight = function() {
