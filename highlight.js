@@ -1,6 +1,6 @@
 /*
 
-highlight v3
+highlight v4
 
 Highlights arbitrary terms.
 
