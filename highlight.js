@@ -1,6 +1,6 @@
 /*
 
-highlight v3
+highlight v4
 
 Highlights arbitrary terms.
 
@@ -72,10 +72,10 @@ Johann Burkard
 			}
 			return skip;
 		}
-		return this.each(function() {
+		return this.length && pat && pat.length ? this.each(function() {
 			ignore = typeof ignore !== 'undefined' ? ignore : $.fn.highlight.defaults.ignore;
 			innerHighlight(this, pat, ignore);
-		});
+		}) : this;
 	};
 	
 	$.fn.highlight.defaults = {
